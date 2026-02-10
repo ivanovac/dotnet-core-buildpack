@@ -173,15 +173,15 @@ dependencies:
   source_sha256: be30d910e67f58d82e753231f1357f326a1a088acf126b21ff77e60aab19b90b
 - name: libgdiplus
   version: '6.1'
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libgdiplus_6.1_linux_noarch_cflinuxfs5.tgz
-  sha256: d6b613d2bd6e92b8c4ff6ade71993984daac528963fa409d97fc5ef63f72408b
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/libgdiplus_6.1_linux_noarch_cflinuxfs5.tgz
+  sha256: 51e00bb9f6cffc99b80b044463c0addea39ef093a5d86df60cff753f39cf08ac
   cf_stacks:
   - cflinuxfs5
   source: https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz
   source_sha256: a1656e30bee9adc6c453e0df2ca3ce74210d1c00fdba99fcf082cac8392e5e43
 - name: libunwind
   version: 1.8.3
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libunwind_1.8.3_linux_noarch_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/libunwind_1.8.3_linux_noarch_cflinuxfs5.tgz
   sha256: 51e00bb9f6cffc99b80b044463c0addea39ef093a5d86df60cff753f39cf08ac
   cf_stacks:
   - cflinuxfs5
@@ -205,7 +205,7 @@ dependencies:
   source_sha256: 4cea680423f98abc6a2a5ca127fb34c5f6586c24217f57749be6ea886c9be9a6
 - name: bower
   version: 1.8.14
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/bower_1.8.14_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/bower_1.8.14_linux_x64_cflinuxfs5.tgz
   sha256: 7e6dd59a3b8f2389c1f4795527553a4551d50e128cc6bf6b777af99eb327daae
   cf_stacks:
   - cflinuxfs5
@@ -213,7 +213,7 @@ dependencies:
   source_sha256: 00df3dcc6e8b3a4dd7668934a20e60e6fc0c4269790192179388c928553a3f7e
 - name: dotnet-aspnetcore
   version: 8.0.21
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/aspnetcore_runtime_8.0.21_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/aspnetcore_runtime_8.0.21_linux_x64_cflinuxfs5.tgz
   sha256: 5819f1bd5db7a0698719aba3e84b011def509bca88940a3b33d8a2654f262fa4
   cf_stacks:
   - cflinuxfs5
@@ -221,7 +221,7 @@ dependencies:
   source_sha256: '08415698df9a1c0d217a69e47f1578b458d2ae3bb4677e0281fadd0209f3745b'
 - name: dotnet-aspnetcore
   version: 9.0.10
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/aspnetcore_runtime_9.0.10_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/aspnetcore_runtime_9.0.10_linux_x64_cflinuxfs5.tgz
   sha256: 0575d9a27ecc1952adf9df87079b2231ed8d634a0ae6056493681cbe460aafe4
   cf_stacks:
   - cflinuxfs5
@@ -229,7 +229,7 @@ dependencies:
   source_sha256: 7fd7fd9da1259212c9423d561b059fa45b21bcbcc8e94da15dcca9fa73d71984
 - name: dotnet-aspnetcore
   version: 10.0.2
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/aspnetcore_runtime_10.0.2_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/aspnetcore_runtime_10.0.2_linux_x64_cflinuxfs5.tgz
   sha256: 341575d97ee8140e19b1b21e852c2e89141bff354504b3592dd64be00b0dc6bf
   cf_stacks:
   - cflinuxfs5
@@ -237,7 +237,7 @@ dependencies:
   source_sha256: 267452b48aa4c296bd3cc757c41b813d2104f4ff7478bc699b83c59452c9735b
 - name: dotnet-runtime
   version: 8.0.21
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_runtime_8.0.21_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_runtime_8.0.21_linux_x64_cflinuxfs5.tgz
   sha256: 9c8e70228a8aa29b8e6741c24fd122b0dd7cf2e46a25106b0edb5f4a43c72cd3
   cf_stacks:
   - cflinuxfs5
@@ -245,7 +245,7 @@ dependencies:
   source_sha256: 1d7a338cada885183b54d43247604e05b8719a08861e47dd032e2a3b8171b3ce
 - name: dotnet-runtime
   version: 9.0.10
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_runtime_9.0.10_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_runtime_9.0.10_linux_x64_cflinuxfs5.tgz
   sha256: 7ba40378bcfe57e62627d99c15900419027941ed1f89a77671d2d38896cbb3e0
   cf_stacks:
   - cflinuxfs5
@@ -253,7 +253,7 @@ dependencies:
   source_sha256: 26a75d079d0af5e7eef47e68799ae2c8cb900d0f7e6de0f4e9dd0bdb0e04a81d
 - name: dotnet-runtime
   version: 10.0.2
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_runtime_10.0.2_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_runtime_10.0.2_linux_x64_cflinuxfs5.tgz
   sha256: 907718e478dbda2c115ca80a768511fe3b0c9e0873d3571dfa0c933470244c82
   cf_stacks:
   - cflinuxfs5
@@ -261,7 +261,7 @@ dependencies:
   source_sha256: 4af0cf52d6419c76363ce0cc8d0b4d03caf3c2df38f82a60cad59e3ac8c79a0d
 - name: dotnet-sdk
   version: 8.0.415
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_sdk_8.0.415_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_sdk_8.0.415_linux_x64_cflinuxfs5.tgz
   sha256: 84ab0ade68da128c0dbbf35013f2d99a739a6eaf4b6a5526ee6339ee13ef5144
   cf_stacks:
   - cflinuxfs5
@@ -269,7 +269,7 @@ dependencies:
   source_sha256: c8fef30bb7e3166e7fda6ac7adb9b72e3f1f5daf6cc9b9c54bcc98b4fa887805
 - name: dotnet-sdk
   version: 9.0.306
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_sdk_9.0.306_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_sdk_9.0.306_linux_x64_cflinuxfs5.tgz
   sha256: a0b6b44cb4fa03f5183aaa32bdb41a3ead7d00d28ec0b8b04fbc4cd021f1dc36
   cf_stacks:
   - cflinuxfs5
@@ -277,7 +277,7 @@ dependencies:
   source_sha256: 56b97e5dc8f4f3fdf73a7dc85f5e45b16c29fc4b5b6ef2cda29c7b54b0e0e34d
 - name: dotnet-sdk
   version: 10.0.102
-  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/dotnet_sdk_10.0.102_linux_x64_cflinuxfs5.tgz
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.1-beta-cflinuxfs5/dotnet_sdk_10.0.102_linux_x64_cflinuxfs5.tgz
   sha256: a7dfb947be229ab78e447f25ad89cb70698869e9e532990dc7a302d855d871b3
   cf_stacks:
   - cflinuxfs5
