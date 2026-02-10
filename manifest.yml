@@ -174,7 +174,7 @@ dependencies:
 - name: libgdiplus
   version: '6.1'
   uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libgdiplus_6.1_linux_noarch_cflinuxfs5.tgz
-  sha256: ff840b05a73b3b4ebe541cb026b2d7f008aab12974195ee6040487106ac99534
+  sha256: d6b613d2bd6e92b8c4ff6ade71993984daac528963fa409d97fc5ef63f72408b
   cf_stacks:
   - cflinuxfs5
   source: https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz
@@ -182,7 +182,7 @@ dependencies:
 - name: libunwind
   version: 1.8.3
   uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libunwind_1.8.3_linux_noarch_cflinuxfs5.tgz
-  sha256: 9668a0c7cab7bcf40c526cb85302dd5f07d217fae79229ca551a3c42b474560d
+  sha256: 51e00bb9f6cffc99b80b044463c0addea39ef093a5d86df60cff753f39cf08ac
   cf_stacks:
   - cflinuxfs5
   source: https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz
