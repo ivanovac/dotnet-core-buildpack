@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 
@@ -119,6 +120,14 @@ func TestIntegration(t *testing.T) {
 }
 
 func downloadBuildpack(name string) (string, error) {
+	// Check if environment variable override exists
+	envVar := fmt.Sprintf("%s_BUILDPACK_FILE", strings.ToUpper(name))
+	if envFile := os.Getenv(envVar); envFile != "" {
+		if _, err := os.Stat(envFile); err == nil {
+			return envFile, nil
+		}
+	}
+
 	uri := fmt.Sprintf("https://github.com/cloudfoundry/%s-buildpack/archive/master.zip", name)
 
 	file, err := os.CreateTemp("", fmt.Sprintf("%s-buildpack-*.zip", name))
