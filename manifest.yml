@@ -171,6 +171,22 @@ dependencies:
   - cflinuxfs4
   source: https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz
   source_sha256: be30d910e67f58d82e753231f1357f326a1a088acf126b21ff77e60aab19b90b
+- name: libgdiplus
+  version: '6.1'
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libgdiplus_6.1_linux_noarch_cflinuxfs5.tgz
+  sha256: ff840b05a73b3b4ebe541cb026b2d7f008aab12974195ee6040487106ac99534
+  cf_stacks:
+  - cflinuxfs5
+  source: https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz
+  source_sha256: a1656e30bee9adc6c453e0df2ca3ce74210d1c00fdba99fcf082cac8392e5e43
+- name: libunwind
+  version: 1.8.3
+  uri: https://github.com/ivanovac/dotnet-core-buildpack/releases/download/v2.5.0-beta-cflinuxfs5/libunwind_1.8.3_linux_noarch_cflinuxfs5.tgz
+  sha256: 9668a0c7cab7bcf40c526cb85302dd5f07d217fae79229ca551a3c42b474560d
+  cf_stacks:
+  - cflinuxfs5
+  source: https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz
+  source_sha256: be30d910e67f58d82e753231f1357f326a1a088acf126b21ff77e60aab19b90b
 - name: node
   version: 20.16.0
   uri: https://buildpacks.cloudfoundry.org/dependencies/node/node_20.16.0_linux_x64_cflinuxfs3_62df07a7.tgz
