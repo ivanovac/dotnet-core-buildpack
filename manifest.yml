@@ -300,3 +300,4 @@ include_files:
 - bin/release
 - bin/supply
 - manifest.yml
+- scripts/install_go.sh
