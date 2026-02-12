@@ -174,6 +174,54 @@ export CF_STACK=cflinuxfs5
 bash scripts/integration.sh --platform docker --github-token <token>
 ```
 
+## Why package.sh Must Export CF_STACK="${stack}"
+The Problem: The install_go.sh script performs stack validation at runtime, as already shown above
+```
+if [[ "${CF_STACK:-}" != "cflinuxfs3" && "${CF_STACK:-}" != "cflinuxfs4" && "${CF_STACK:-}" != "cflinuxfs5" ]]; then
+    echo "       **ERROR** Unsupported stack"
+    exit 1
+fi
+```
+
+This script is sourced by the buildpack's wrapper scripts (`supply`, `finalize`, `compile`) when they run **inside the container** during application staging.
+
+#### The Issue
+
+When `buildpack-packager` builds the buildpack, it:
+
+1. Downloads dependencies listed in `manifest.yml` based on the stack
+2. May invoke pre-packaging scripts that need to know which stack is being built
+
+However, `buildpack-packager` doesn't automatically pass the `--stack` parameter as an environment variable to child processes. The wrapper scripts need `CF_STACK` set when they run `install_go.sh`.
+
+#### The Solution
+By explicitly exporting `CF_STACK` in `package.sh`:
+
+```
+if [[ "${stack}" != "any" ]]; then
+    export CF_STACK="${stack}"  # Makes it available to subprocesses
+    stack_flag="--stack=${stack}"
+fi
+```
+
+This ensures:
+1. **During packaging**: Any pre-packaging scripts that source `install_go.sh` can validate the stack correctly
+2. **At runtime**: When the buildpack runs in the container, `CF_STACK` environment variable is set by Cloud Foundry, but the packaging process needs to handle it explicitly for build-time operations
+
+#### Why This Matters
+Without the export:
+
+ - install_go.sh sees CF_STACK as empty (${CF_STACK:-} evaluates to empty string)
+ - The validation check fails: empty ≠ cflinuxfs3, cflinuxfs4, or cflinuxfs5
+ - Build fails with "Unsupported stack" error even though the stack is valid
+
+With the export:
+
+ - `CF_STACK` is properly set in the environment for all child processes
+ - `install_go.sh` can validate that the stack is supported
+ - Buildpack packaging and execution succeed
+
+
 ## Key Lessons Learned
 1. Tarball Structure Matters: Native libraries must have files at tarball root, not in a wrapper directory
 2. Runtime Scripts Need Packaging: Scripts sourced by bin/ wrappers must be in include_files
